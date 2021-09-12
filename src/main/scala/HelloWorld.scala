@@ -62,4 +62,52 @@ println()
     println(doVal)
     doVal = doVal + 1
   }
+
+  val p = new Person("Julia", "Kern")
+  println(p.firstName)
+  p.lastName = "Manes"
+  p.printFullName()
+  p.welcome()
+  val sumRes = p.sumNum(10, 20)
+  println(sumRes)
+
+  var (id, name, age) = p.getUserInfo();
+  println("User details:" + id+ " "+ name)
+
+  val adder = new Calculator()
+  val addeRes = adder.add(10, 100)
+  val subRes = adder.sub(20, 3)
+  println(addeRes)
+  println(subRes)
+  val arr = List.range(1, 10)
+  println(arr)
+  val arr1 = (1 to 10).toList
+  println(arr1)
+  val arr2 = (1 to 11 by 2).toList
+  println(arr2)
+  val letter = ('a' to 'z' by 2).toList
+  println(letter)
+
+  val nums = (1 to 10).toList
+  nums.foreach(println)
+
+  val strs = List("and", "bhavan", "shraavan", "Thala")
+  strs.foreach(println)
+
+  val numsFil = nums.filter(_ > 2)
+  println(numsFil)
+
+  val numMap = nums.map(_ * 2)
+  println(numMap)
+
+  strs.map(_.capitalize).foreach(println)
+
+  val sumOfNums = nums.foldLeft(0)(_ + _)
+  println(sumOfNums)
+
+  val mulOfNums = nums.foldLeft(1)(_ * _)
+  println(mulOfNums)
+
+  val userDetailsV1 = new UserDetails(1,"Hello ", 27)
+  println(userDetailsV1.name)
 }
